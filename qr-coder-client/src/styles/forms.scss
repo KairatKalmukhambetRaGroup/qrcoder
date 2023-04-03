@@ -1,0 +1,274 @@
+@use './variables' as v;
+#vcardform{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
+
+    width: 100%;
+
+    background: v.$white;
+    border-radius: 16px;
+    form{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+        .info{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            .inputs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+                .row{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 16px;
+                    width: 100%;
+                    .col{
+                        width: calc(50% - 8px);
+                    }
+                }
+                &.hidden{
+                    display: none;
+                }
+            }
+            .more{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 4px;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: v.$main_black;
+
+                i{
+                    content: url('../assets/svg/arrow-down-black.svg');
+                }
+                &.active i{
+                    content: url('../assets/svg/arrow-up-black.svg');
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+}
+
+#carddesign{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20px;
+
+    width: 100%;
+    .cardForm{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+
+        width: 100%;
+
+        background: v.$white;
+        border-radius: 16px;
+
+        .card{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 24px;
+            width: 100%;
+            .front{
+                width: calc(50% - 12px);
+                aspect-ratio: 420 / 274;
+            }
+            .back{
+                width: calc(50% - 12px);
+                aspect-ratio: 420 / 274;
+            }
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px!important;
+            gap: 24px!important;
+
+            width: 100%;
+            .row{
+                display: flex;
+                gap: 16px;
+                width: 100%;
+                .col{
+                    width: calc(50% - 8px);
+                }
+            }
+            .inputs{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 24px;
+                width: 100%;
+            }
+            .upload-btn{
+                input{
+                    display: none;
+                }
+                i{
+                    width: 24px;
+                    height: 24px;
+                    content: url('../assets/svg/upload-white.svg');
+                }
+            }
+            .logotype{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                padding: 0px;
+                gap: 32px;
+                img{
+                    width: 120px;
+                    padding: 16px;
+                    background: #F5F5F5;
+                    border: 1px dashed v.$main_black;
+                    border-radius: 10px;
+                }
+                .remove-btn i{
+                    content: url('../assets/svg/delete-black.svg');
+                }
+            }
+        }
+    }
+    .download{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 32px;
+        gap: 32px;
+
+        width: 100%;
+
+        background: v.$white;
+        border-radius: 16px;
+        .col{
+            width: calc(50% - 16px);
+            .select{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 8px;
+
+                width: 100%;
+                label{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #8C8C8C;
+                }
+                .file-extension-wrapper{
+                    position: relative;
+                    width: 100%;
+                    height: 40px;
+                    .file-extension{
+                        position: absolute;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        z-index: 10;
+            
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 8px 12px;
+                        gap: 8px;
+            
+                        background: v.$white;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 8px;
+            
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: v.$main_black;
+                        .current{
+                            cursor: pointer;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            i{
+                                width: 24px;
+                                height: 24px;
+                                content: url('../assets/svg/arrow-down-black.svg');
+                            }
+                        }
+                        .options{
+                            display: none;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 8px;
+                            width: 100%;
+                            .option{
+                                cursor: pointer;
+                                width: 100%;
+                                .text{
+                                    display: inline-flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    gap: 3px;
+                                    height: 28px;
+                                }
+                                &:hover .text{
+                                    font-weight: 600;
+                                    .underline{
+                                        width: 100%;;
+                                        height: 1px;
+                                        background-color: v.$main_black;       
+                                    }
+                                } 
+                            }
+                        }
+                        &.active{
+                            .current i{
+                                content: url('../assets/svg/arrow-up-bold-black.svg');
+                            }
+                            .options{
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+            .download-btn i{
+                width: 24px;
+                height: 24px;
+                content: url('../assets/svg/download-white.svg');
+            }
+        }
+    }
+}

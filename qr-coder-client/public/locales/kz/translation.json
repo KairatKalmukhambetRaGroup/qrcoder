@@ -1,0 +1,281 @@
+{
+    "header":{
+        "login": "Кіру",
+        "signup": "Тіркелу",
+        "main": "Басты бет",
+        "create": "QR визит картаңызды жасаңыз",
+        "logout": "Шығу"
+    },
+    "welcome":{
+        "top":{
+            "heading": "Өзіңіздің QR визиткаңызды жасаңыз",
+            "body":"Сканерлеуге және контактілерде сақтауға болатын QR-ом визиткасы"
+        },
+        "functions": {
+            "heading": "Қосымша мүмкіндіктер",
+            "cards": [
+                {
+                    "icon": "business-card",
+                    "title": "Визитка",
+                    "description": "Сіздің бизнесіңіз үшін дайын визитка"
+                },
+                {
+                    "icon":"edit",
+                    "title": "Өңдеу",
+                    "description": "QR-ді өзгертпестен деректерді өзгертуге болады"
+                }
+            ],
+            "createbtn": "QR картаңызды жасаңыз"
+        },
+        "qr":{
+            "heading": "QR-код",
+            "description": "Тегін жасаңыз және тіркеусіз 14 күн пайдаланыңыз."
+        }
+    },
+    "footer": {
+        "help":"Көмек"
+    },
+
+    "goBack": "Артқа қайту",
+
+    "signup": {
+        "heading": "Тіркеу",
+        "inputs": {
+            "email": {
+                "label": "Электрондық пошта",
+                "placeholder": "example@gmail.com"
+            },
+            "password": {
+                "label": "Құпия сөз",
+                "placeholder": "Құпия сөзді енгізіңіз"
+            },
+            "password_repeat": {
+                "label": "Құпия сөзді растаңыз",
+                "placeholder": "Құпия сөзді растаңыз"
+            }
+        },
+        "errors": {
+            "pass_match": "Құпия сөздеріңіз бірдей емес. Тағы бір рет қайталаңыз",
+            "userAlreadyExist": "Пользователь уже существует"
+        },
+        "next_btn": "Жалғастыру",
+        "or": "немесе",
+        "with_google": "Google аккаунты арқылы",
+        "has_account": "Менің аккаунтым бар",
+        "success": {
+            "text": "Біз сізге тіркелгіңізді белсендіру сілтемесі бар электрондық хат жібердік.",
+            "button": "Қайтадан жіберу"
+        }
+    },
+    "login": {
+        "heading": "Кіру",
+        "inputs": {
+            "email": {
+                "label": "Электрондық пошта",
+                "placeholder": "example@gmail.com"
+            },
+            "password": {
+                "label": "Құпия сөз",
+                "placeholder": "Құпия сөзді енгізіңіз"
+            }
+        },
+        "errors": {
+            "pass_match": "Құпия сөздеріңіз бірдей емес. Тағы бір рет қайталаңыз"
+        },
+        "forgot_password": "Құпия сөзді ұмыттыңыз ба?",
+        "restore": "Қалпына келтіру",
+        "login_btn": "Кіру",
+        "or": "немесе",
+        "with_google": "Google аккаунты арқылы кіру",
+        "no_account": "Аккаунт жок па?",
+        "signup": "Тіркелу"
+    },
+
+
+    "qrcard": {
+        "download": "Жүктеп алу",
+        "delete": "Жою",
+        "edit": "Өңдеу",
+        "extensions": {
+            "svg": ".svg форматы",
+            "png": ".png форматы",
+            "jpeg": ".jpeg форматы"
+        }
+    },
+    "qrsavestatus": {
+        "loading": "QR деректері сақталуда",
+        "success": "QR деректері сақталды!",
+        "error": "Қате! Бірдеңе дұрыс болмады..."
+    },
+    "popup": {
+        "registration": {
+            "heading": "Тіркеліңіз және өзіңіздің QR визит карталарыңызды жасаңыз",
+            "description": "оларды шексіз пайдалану үшін",
+            "signup": "Тіркелу",
+            "or": "немесе",
+            "with_google": "Google аккаунты арқылы",
+            "has_account": "Менің аккаунтым бар"
+        }
+    },
+    
+    "forms": {
+        "tabs": {
+            "content": "Мазмұны",
+            "design": "Дизайн"
+        },
+        "inputs": {
+            "name": {
+                "label": "Сіздің QR атыңыз *",
+                "placeholder": "Мысалы, менің QR"
+            },
+            "firstname": {
+                "label": "Аты",
+                "placeholder": "Атыңызды енгізіңіз"
+            },
+            "lastname": {
+                "label": "Тегі",
+                "placeholder": "Тегінізді енгізіңіз"
+            },
+            "email": {
+                "label": "Электрондық пошта",
+                "placeholder": "example@gmail.com"
+            },
+            "website": {
+                "label": "Веб-сайт",
+                "placeholder": "Сілтеме"
+            },
+            "personalPhone": {
+                "label": "Мобильдік телефон номері",
+                "placeholder": ""
+            },
+            "workPhone": {
+                "label": "Жұмыс нөмірі",
+                "placeholder": ""
+            },
+            "fax": {
+                "label": "Факс нөмірі",
+                "placeholder": ""
+            },
+            "company": {
+                "label": "Ұйым / Компания",
+                "placeholder": "Атауды енгізіңіз"
+            },
+            "jobTitle": {
+                "label": "Лауазым",
+                "placeholder": "Атауды енгізіңіз"
+            },
+            "country": {
+                "label": "Мемлекет",
+                "placeholder": "Енгізіңіз немесе таңдаңыз"
+            },
+            "city": {
+                "label": "Қала",
+                "placeholder": "Енгізіңіз немесе таңдаңыз"
+            },
+            "postIndex": {
+                "label": "Пошта индексі",
+                "placeholder": "000000"
+            },
+            "backgroundColor": {
+                "label": "Фон",
+                "placeholder": "#F5F5F5"
+            },
+            "textColor": {
+                "label": "Мәтін түсі",
+                "placeholder": "#181818"
+            },
+            "qrColor": {
+                "label": "QR түсі",
+                "placeholder": "#181818"
+            }
+        },
+        "showMore": "Көбірек көрсету",
+        "showLess": "Азырақ көрсету",
+        "save": "Сақтау",
+        "reset": "Бастапқы күйге келтіру",
+        "chooseDesignFormat": "Файл форматын таңдаңыз",
+        "downloadDesign": "Визит картасының дерекөзін жүктеп алыңыз",
+        "uploadLogo": "Логотипті жүктеп алыңыз",
+        "deleteLogo": "Логотипті жою",
+        "design": {
+            "name": "Алмаз Алмазұлы",
+            "title": "",
+            "phone": "+7 777 123 4567",
+            "email": "almaz.almazuly@gmail.com"
+        }
+    },
+
+    "profile": {
+        "heading": "Профиль",
+        "tabs": {
+            "settings": "Баптаулар",
+            "security": "Қауіпсіздік"
+        },
+        "settings": {
+            "heading": "Электрондық жіберім",
+            "label": "Жаңартулар туралы жіберім алыңыз"
+        },
+        "security": {
+            "email": {
+                "heading": "Электрондық пошта",
+                "description": "Электрондық пошта мекенжайыңызды өзгертіңіз және біз сіздің жаңа поштаңызға жіберген сілтеме арқылы растаңыз"
+            },
+            "password": {
+                "heading": "Құпия сөз",
+                "description": "Ең аз құпия сөз ұзындығы 8 таңбадан тұрады. Басқа сайттардың құпия сөздерін немесе хакерлер оңай болжай алатын опцияларды пайдаланбаңыз"
+            }
+        },
+        "inputs": {
+            "old_email": {
+                "label": "Eскі пошта",
+                "placeholder": ""
+            },
+            "new_email": {
+                "label": "Жаңа пошта",
+                "placeholder": "Жаңа электрондық поштаны енгізіңіз"
+            },
+            "new_email_re": {
+                "label": "Жаңа электрондық поштаны растаңыз",
+                "placeholder": "Жаңа электрондық поштаны растаңыз"
+            },
+            "changeEmail": "Поштаны өзгерту",
+            "old_password": {
+                "label": "Ескі құпия сөз",
+                "placeholder": "Ағымдағы құпия сөзді енгізіңіз"
+            },
+            "new_password": {
+                "label": "Жаңа құпия сөз",
+                "placeholder": "Жаңа құпия сөзді енгізіңіз"
+            },
+            "new_password_re": {
+                "label": "Жаңа құпия сөзді растаңыз",
+                "placeholder": "Жаңа құпиясөзді растаңыз"
+            },
+            "changePassword": "Құпия сөзді өзгерту"
+        }
+    },
+    "qr": {
+        "main": {
+            "heading": "Менің QR",
+            "progress": "Сізде болуы мүмкін QR кодтарының жалпы саны: {{val}}"
+        },
+        "newQr": "Жаңа QR",
+        "item": {
+            "title": "QR атауы:",
+            "noname": "Аты жоқ",
+            "lastEdit": "соңғы өзгерістер {{date}}",
+            "delete": "Жою",
+            "edit": "Өңдеу"
+        }
+    },
+    "activateAccount": {
+        "success": "Электрондық поштаңыз расталды"
+    },
+
+    "notFound": {
+        "title": "404 қатесі...",
+        "description": "Сіз сұраған бет жоқ. Ол ескірген, жойылған немесе мекенжай жолағына қате мекенжай енгізілген болуы мүмкін.",
+        "button": "Тағы бір рет көріңіз"
+    }
+
+}

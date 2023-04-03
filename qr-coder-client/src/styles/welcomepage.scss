@@ -1,0 +1,140 @@
+@use './variables' as v;
+#welcomepage{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .top-block{
+        position: relative;
+        height: 640px;
+        .content{
+            position: relative;
+            z-index: 10;
+            height: 100%;            
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .text{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+                width: 544px;
+                .heading{
+                    font-weight: 700;
+                    font-size: 64px;
+                    line-height: 72px;
+                    color: v.$black;
+                }
+                .body{
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: v.$black;                
+                }
+            }
+        }
+        .imgs{
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .left i{
+                content: url('../assets/images/welcome-top-image-left.png');
+            }
+            .right i{
+                content: url('../assets/images/welcome-top-image-right.png');
+            }
+        }
+    }
+    .functions{
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 40px 0;
+            gap: 48px;
+            .heading{
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                color: v.$black;
+            }
+            .cards{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 32px;
+                .card{
+                    align-self: stretch;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 32px;
+                    padding: 32px;
+                    background: #FFFFFF;
+                    border-radius: 16px;
+                    flex-grow: 1;
+                    width: calc((100% - 64px) / 3);
+                    .card-icon{
+                        height: 48px;
+                        width: 48px;
+                        i{
+                            &.business-card{content: url('../assets/svg/business-card.svg');}
+                            &.edit{content: url('../assets/svg/edit.svg');}
+                            &.graph-chart{content: url('../assets/svg/graph-chart.svg');}
+                        }
+                    }
+                    .card-body{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 16px;
+                        .title{
+                            font-weight: 700;
+                            font-size: 26px;
+                            line-height: 32px;                            
+                            color: #282828;
+                        }
+                        .description{
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: #323232;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .freeQR{
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 40px 0 120px;
+            gap: 48px;
+            .top{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+                .heading{
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 48px;
+                    color: v.$black;
+                }
+                .description{
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: #323232; 
+                }
+            }
+        }
+    }
+}

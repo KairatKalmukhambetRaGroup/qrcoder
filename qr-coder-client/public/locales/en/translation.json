@@ -1,0 +1,281 @@
+{
+    "header":{
+        "login": "Log in",
+        "signup": "Sign up",
+        "main": "Main",
+        "create": "Create your QR business card",
+        "logout": "Log out"
+    },
+    "welcome":{
+        "top":{
+            "heading": "Create your own \nQR business card",
+            "body":"A business card with a QR that can be scanned and saved in contacts"
+        },
+        "functions": {
+            "heading": "Additional functions",
+            "cards": [
+                {
+                    "icon": "business-card",
+                    "title": "Business card",
+                    "description": "Ready business card for your business"
+                },
+                {
+                    "icon":"edit",
+                    "title": "Editing",
+                    "description": "You can change the data without changing the QR"
+                }
+            ],
+            "createbtn": "Create your QR business card"
+        },
+        "qr":{
+            "heading": "QR code",
+            "description": "Create for free and use 14 days without registration."
+        }
+    },
+    "footer": {
+        "help":"Help"
+    },
+
+    "goBack": "Go back",
+
+    "signup": {
+        "heading": "Registration",
+        "inputs": {
+            "email": {
+                "label": "Email",
+                "placeholder": "example@gmail.com"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Enter password"
+            },
+            "password_repeat": {
+                "label": "Confirm the password",
+                "placeholder": "Confirm the password"
+            }
+        },
+        "errors": {
+            "pass_match": "Your passwords do not match. Repeat one more time",
+            "userAlreadyExist": "Пользователь уже существует"
+        },
+        "next_btn": "Continue",
+        "or": "or",
+        "with_google": "through Google account",
+        "has_account": "I have an account",
+        "success": {
+            "text": "We have sent you an email with a link to activate your account.",
+            "button": "Send again"
+        }
+    },
+    "login": {
+        "heading": "Login",
+        "inputs": {
+            "email": {
+                "label": "Email",
+                "placeholder": "example@gmail.com"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Enter password"
+            }
+        },
+        "errors": {
+            "pass_match": "Your passwords do not match. Repeat one more time"
+        },
+        "forgot_password": "Forgot your password?",
+        "restore": "Restore",
+        "login_btn": "Login",
+        "or": "or",
+        "with_google": "Login with Google account",
+        "no_account": "Don't have an account?",
+        "signup": "Sign up"
+    },
+
+
+    "qrcard": {
+        "download": "Download",
+        "delete": "Delete",
+        "edit": "Edit",
+        "extensions": {
+            "svg": ".svg format",
+            "png": ".png format",
+            "jpeg": ".jpeg format"
+        }
+    },
+    "qrsavestatus": {
+        "loading": "QR data is saving",
+        "success": "QR data is saved",
+        "error": "Error! Something went wrong..."
+    },
+    "popup": {
+        "registration": {
+            "heading": "Register and create your own QR business cards",
+            "description": "to use them unlimited",
+            "signup": "Sign up",
+            "or": "or",
+            "with_google": "through Google account",
+            "has_account": "I have an account"
+        }
+    },
+    
+    "forms": {
+        "tabs": {
+            "content": "Content",
+            "design": "Design"
+        },
+        "inputs": {
+            "name": {
+                "label": "Your QR name *",
+                "placeholder": "For example, My QR"
+            },
+            "firstname": {
+                "label": "First name",
+                "placeholder": "Enter first name"
+            },
+            "lastname": {
+                "label": "Last name",
+                "placeholder": "Enter last name"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "example@gmail.com"
+            },
+            "website": {
+                "label": "Website",
+                "placeholder": "Website link"
+            },
+            "personalPhone": {
+                "label": "Personal phone number",
+                "placeholder": ""
+            },
+            "workPhone": {
+                "label": "Work phone number",
+                "placeholder": ""
+            },
+            "fax": {
+                "label": "Fax number",
+                "placeholder": ""
+            },
+            "company": {
+                "label": "Organization / Company",
+                "placeholder": "Enter a name"
+            },
+            "jobTitle": {
+                "label": "Job title",
+                "placeholder": "Enter the title"
+            },
+            "country": {
+                "label": "Country",
+                "placeholder": "Enter or select"
+            },
+            "city": {
+                "label": "City",
+                "placeholder": "Enter or select"
+            },
+            "postIndex": {
+                "label": "Postcode",
+                "placeholder": "000000"
+            },
+            "backgroundColor": {
+                "label": "Background",
+                "placeholder": "#F5F5F5"
+            },
+            "textColor": {
+                "label": "Text color",
+                "placeholder": "#181818"
+            },
+            "qrColor": {
+                "label": "QR color",
+                "placeholder": "#181818"
+            }
+        },
+        "showMore": "Show more",
+        "showLess": "Show less",
+        "save": "Save",
+        "reset": "Reset",
+        "chooseDesignFormat": "Choose file format",
+        "downloadDesign": "Download business card source",
+        "uploadLogo": "Upload logo",
+        "deleteLogo": "Remove logo",
+        "design": {
+            "name": "John Doe",
+            "title": "Director",
+            "phone": "+7 777 123 4567",
+            "email": "john.doe@gmail.com"
+        }
+    },
+
+    "profile": {
+        "heading": "Profile",
+        "tabs": {
+            "settings": "Settings",
+            "security": "Safety"
+        },
+        "settings": {
+            "heading": "Email newsletter",
+            "label": "Receive newsletter about updates"
+        },
+        "security": {
+            "email": {
+                "heading": "Email",
+                "description": "Change your email address and confirm via the link we will send you to your new mail"
+            },
+            "password": {
+                "heading": "Password",
+                "description": "The minimum password length is 8 characters. Do not use passwords from other sites or options that hackers can easily guess"
+            }
+        },
+        "inputs": {
+            "old_email": {
+                "label": "Old email",
+                "placeholder": ""
+            },
+            "new_email": {
+                "label": "New email",
+                "placeholder": "Enter a new email"
+            },
+            "new_email_re": {
+                "label": "Confirm new email",
+                "placeholder": "Confirm new email"
+            },
+            "changeEmail": "Change email",
+            "old_password": {
+                "label": "Old password",
+                "placeholder": "Enter the current password"
+            },
+            "new_password": {
+                "label": "New password",
+                "placeholder": "Enter a new password"
+            },
+            "new_password_re": {
+                "label": "Confirm new password",
+                "placeholder": "Confirm new password"
+            },
+            "changePassword": "Change password"
+        }
+    },
+    "qr": {
+        "main": {
+            "heading": "My QR",
+            "progress": "The total number of QR codes you can have: {{val}}"
+        },
+        "newQr": "New QR",
+        "item": {
+            "title": "QR name:",
+            "noname": "No name",
+            "lastEdit": "last changes {{date}}",
+            "delete": "Delete",
+            "edit": "Edit"
+        }
+    },
+    "activateAccount": {
+        "success": "Your email has been verified"
+    },
+
+    "notFound": {
+        "title": "Error 404...",
+        "description": "The page you are requesting does not exist. It may be outdated, removed, or the wrong address was entered in the address bar.",
+        "button": "Try again"
+    }
+
+}

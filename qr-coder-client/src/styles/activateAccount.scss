@@ -1,0 +1,36 @@
+@use './variables' as v;
+
+#activateAccount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 40px 0 120px;
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 48px;
+        gap: 32px;
+
+        max-width: 416px;
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 16px;
+
+        i.success{
+            width: 120px;
+            content: url('../assets/svg/letter-illustration-success.svg');
+        }
+        .text{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: v.$main_black;
+
+        }
+    }
+}

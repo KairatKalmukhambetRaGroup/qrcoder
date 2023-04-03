@@ -1,0 +1,19 @@
+.loading{
+    width: 32px;
+    height: 32px;
+    animation: rotation 2s infinite linear;
+    i{
+        width: 32px;
+        height: 32px;
+        content: url('../assets/svg/loading.svg');
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

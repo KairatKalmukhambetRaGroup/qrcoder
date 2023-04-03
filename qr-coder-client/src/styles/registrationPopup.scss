@@ -1,0 +1,78 @@
+@use './variables' as v;
+
+#registrationPopup{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    gap: 32px;
+
+    width: 500px;
+    // height: 444px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 16px;
+        .heading{
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 32px;
+            text-align: center;
+            color: v.$main_black;            
+        }
+        .description{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            color: v.$main_black;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        .or-line{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba($color: v.$main_black, $alpha: .5);
+
+            span{
+                display: block;
+                margin: none;
+                flex-grow: 1;
+                height: 1px;
+                background-color: v.$bg_gey;
+            }
+        }
+        .google-login{
+            i{
+                width: 24px;
+                height: 24px;
+                content: url('../assets/svg/google-logo-small-outline.svg');
+            }
+        }
+    }
+    .has-account{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: v.$main_black;
+    }
+}

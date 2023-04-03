@@ -1,0 +1,37 @@
+@use './variables' as v;
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background: v.$main_black;
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            color: v.$white;
+        }
+        .icons{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            .icon{
+                height: 24px;
+                width: 24px;
+                &.whatsapp i{content: url('../assets/svg/whatsapp-white.svg');}
+                &.mail i{content: url('../assets/svg/mail-white.svg');}
+            }
+            .btn48{
+                background: rgba(252, 252, 252, 0.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@use './variables' as v;
+
+#qrform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    .top{
+        display: flex;
+        position: relative;
+        width: 100%;
+        .popover{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 16px 24px;
+            gap: 16px;
+
+            height: 68px;
+
+            background: rgba(24, 24, 24, 0.1);
+            border-radius: 16px;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: right;
+            color: v.$main_black;
+
+            .icon{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 6px;
+
+                width: 36px;
+                height: 36px;
+
+                background: rgba(24, 24, 24, 0.1);
+                border-radius: 85px;
+                .loading, i{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            &.status-success i{
+                content: url('../assets/svg/check-black.svg');
+            }
+            &.status-error i{
+                content: url('../assets/svg/error.svg');
+            }
+        }
+    }
+
+
+    .tab-content{
+        width: 100%;   
+    }
+}

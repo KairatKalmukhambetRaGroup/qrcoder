@@ -1,0 +1,282 @@
+{
+    "header":{
+        "login": "Войти",
+        "signup": "Зарегестрироваться",
+        "main": "Главная",
+        "create": "Создать свою QR визитку",
+        "logout": "Выйти"
+    },
+    "welcome":{
+        "top":{
+            "heading": "Создай свою\nQR визитку",
+            "body":"Визитка с QR-ом, которую можно отсканировать и сохранить в контактах"
+        },
+        "functions": {
+            "heading": "Дополнительные функции",
+            "cards": [
+                {
+                    "icon":"business-card",
+                    "title": "Визитка",
+                    "description": "Готовая визитка для вашего бизнеса"
+                },
+                {
+                    "icon":"edit",
+                    "title": "Редактирование",
+                    "description": "Можно поменять данные, не меняя QR"
+                }
+            ],
+            "createbtn": "Создать свою QR визитку"
+        },
+        "qr":{
+            "heading": "QR-код",
+            "description": "Создай бесплатно и пользуйся  14 дней без регистрации."
+        }
+    },
+    "footer": {
+        "help":"Помощь"
+    },
+
+    "goBack": "Вернуться назад",
+
+    "signup": {
+        "heading": "Регистрация",
+        "inputs": {
+            "email": {
+                "label": "Электронная почта",
+                "placeholder": "example@gmail.com"
+            },
+            "password": {
+                "label": "Пароль",
+                "placeholder": "Введите пароль"
+            },
+            "password_repeat": {
+                "label": "Подтвердите пароль",
+                "placeholder": "Повторите пароль"
+            }
+        },
+        "errors": {
+            "pass_match": "Ваши пароли не совпадают. Повторите еще раз",
+            "userAlreadyExist": "Пользователь уже существует"
+        },
+        "next_btn": "Продолжить",
+        "or": "или",
+        "with_google": "через Google аккаунт",
+        "has_account": "У меня есть аккаунт",
+        "success": {
+            "text": "Мы отправили вам на почту ссылку с активацией аккаунта",
+            "button": "Отправить еще раз"
+        }
+    },
+    "login": {
+        "heading": "Вход",
+        "inputs": {
+            "email": {
+                "label": "Электронная почта",
+                "placeholder": "example@gmail.com"
+            },
+            "password": {
+                "label": "Пароль",
+                "placeholder": "Введите пароль"
+            }
+        },
+        "errors": {
+            "pass_match": "Ваши пароли не совпадают. Повторите еще раз"
+        },
+        "forgot_password": "Забыли пароль?",
+        "restore": "Восстановить",
+        "login_btn": "Войти",
+        "or": "или",
+        "with_google": "Войти через Google аккаунт",
+        "no_account": "Нет аккаунта?",
+        "signup": "Зарегистрироваться"
+    },
+
+
+    "qrcard": {
+        "download": "Скачать",
+        "delete": "Удалить",
+        "edit": "Редактировать",
+        "extensions": {
+            "svg": "формат .svg",
+            "png": "формат .png",
+            "jpeg": "формат .jpeg"
+        }
+    },
+    "qrsavestatus": {
+        "loading": "Данные QR сохраняются",
+        "success": "Данные QR сохранены!",
+        "error": "Ошибка! Что-то пошло не так..."
+    },
+    "popup": {
+        "registration": {
+            "heading": "Регистрируйтесь и создавайте свои QR визитки",
+            "description": "чтобы использовать их безлимитно",
+            "signup": "Зарегистрироваться",
+            "or": "или",
+            "with_google": "через Google аккаунт",
+            "has_account": "У меня есть аккаунт"
+        }
+    },
+
+
+    "forms": {
+        "tabs": {
+            "content": "Содержание",
+            "design": "Дизайн"
+        },
+        "inputs": {
+            "name": {
+                "label": "Название вашего QR *",
+                "placeholder": "Например, Мой QR"
+            },
+            "firstname": {
+                "label": "Имя",
+                "placeholder": "Введите имя"
+            },
+            "lastname": {
+                "label": "Фамилия",
+                "placeholder": "Введите фамилию"
+            },
+            "email": {
+                "label": "Электронная почта",
+                "placeholder": "example@gmail.com"
+            },
+            "website": {
+                "label": "Сайт",
+                "placeholder": "Ссылка на сайт"
+            },
+            "personalPhone": {
+                "label": "Мобильный номер",
+                "placeholder": ""
+            },
+            "workPhone": {
+                "label": "Рабочий номер",
+                "placeholder": ""
+            },
+            "fax": {
+                "label": "Номер факса",
+                "placeholder": ""
+            },
+            "company": {
+                "label": "Организация / Компания",
+                "placeholder": "Введите название"
+            },
+            "jobTitle": {
+                "label": "Должность",
+                "placeholder": "Введите наименование"
+            },
+            "country": {
+                "label": "Страна",
+                "placeholder": "Введите или выберите"
+            },
+            "city": {
+                "label": "Город",
+                "placeholder": "Введите или выберите"
+            },
+            "postIndex": {
+                "label": "Почтовый индекс",
+                "placeholder": "000000"
+            },
+            "backgroundColor": {
+                "label": "Задний фон",
+                "placeholder": "#F5F5F5"
+            },
+            "textColor": {
+                "label": "Цвет текста",
+                "placeholder": "#181818"
+            },
+            "qrColor": {
+                "label": "Цвет QR",
+                "placeholder": "#181818"
+            }
+        },
+        "showMore": "Показать больше",
+        "showLess": "Показать меньше",
+        "save": "Сохранить",
+        "reset": "Сбросить",
+        "chooseDesignFormat": "Выберите формат файла",
+        "downloadDesign": "Скачать исходник визитки",
+        "uploadLogo": "Загрузить логотип",
+        "deleteLogo": "Удалить логотип",
+        "design": {
+            "name": "Николай барашкин",
+            "title": "Директор",
+            "phone": "+7 777 123 4567",
+            "email": "nikolay.b@gmail.com"
+        }
+    },
+
+    "profile": {
+        "heading": "Профиль",
+        "tabs": {
+            "settings": "Настройки",
+            "security": "Безопасность"
+        },
+        "settings": {
+            "heading": "Электронная рассылка",
+            "label": "Получать рассылку об обновлениях"
+        },
+        "security": {
+            "email": {
+                "heading": "Электронная почта",
+                "description": "Измените адрес электронной почты и подтвердите через ссылку, которую мы отправим вам на вашу новую почту"
+            },
+            "password": {
+                "heading": "Пароль",
+                "description": "Минимальная длина пароля – 8 символов. Не используйте пароли от других сайтов или варианты, которые злоумышленники смогут легко подобрать"
+            }
+        },
+        "inputs": {
+            "old_email": {
+                "label": "Старая почта",
+                "placeholder": ""
+            },
+            "new_email": {
+                "label": "Новая почта",
+                "placeholder": "Введите новую почту"
+            },
+            "new_email_re": {
+                "label": "Подтвердите новую почта",
+                "placeholder": "Подтвердите новую почту"
+            },
+            "changeEmail": "Сменить почту",
+            "old_password": {
+                "label": "Старый пароль",
+                "placeholder": "Введите текущий пароль"
+            },
+            "new_password": {
+                "label": "Новый пароль",
+                "placeholder": "Введите новый пароль"
+            },
+            "new_password_re": {
+                "label": "Подтвердите новый пароль",
+                "placeholder": "Подтвердите новый пароль"
+            },
+            "changePassword": "Сменить пароль"
+        }
+    },
+    "qr": {
+        "main": {
+            "heading": "Мои QR",
+            "progress": "Общее количество QR-кодов, которые вы можете иметь: {{val}}"
+        },
+        "newQr": "Новый QR",
+        "item": {
+            "title": "Название QR:",
+            "noname": "Нет названия",
+            "lastEdit": "последние изменения {{date}}",
+            "delete": "Удалить",
+            "edit": "Редактировать"
+        }
+    },
+    "activateAccount": {
+        "success": "Ваша электронная почта подтверждена"
+    },
+
+    "notFound": {
+        "title": "Ошибка 404...",
+        "description": "Страница, которую вы запрашиваете, не существует. Возможно она устарела, была удалена, или был введен неверный адрес в адресной строке",
+        "button": "Попробовать еще раз"
+    }
+
+}

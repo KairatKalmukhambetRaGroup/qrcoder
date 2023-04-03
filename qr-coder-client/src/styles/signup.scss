@@ -1,0 +1,147 @@
+@use './variables' as v;
+#signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 120px;
+    gap: 40px;
+    .heading{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: v.$black;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 48px;
+        gap: 32px;
+
+        // width: 416px;
+        background: v.$white;
+        border-radius: 16px;
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            width: 320px;
+
+            .error{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 8px;
+                gap: 8px;
+                width: 100%;
+                background: v.$bg_gey;
+                border: 1px solid #949494;
+                border-radius: 8px;
+                i{
+                    width: 24px;
+                    height: 24px;
+                    content: url('../assets/svg/error.svg');
+                }
+                .error-text{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: v.$main_black;
+                    opacity: 0.7;
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            .or-line{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 10px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba($color: v.$main_black, $alpha: .5);
+                span{
+                    display: block;
+                    margin: none;
+                    flex-grow: 1;
+                    height: 1px;
+                    background-color: v.$bg_gey;
+                }
+            }
+            .google-login{
+                i{
+                    width: 24px;
+                    height: 24px;
+                    content: url('../assets/svg/google-logo-small-outline.svg');
+                }
+            }
+        }
+        .has-account{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: v.$main_black;
+        }
+    }
+
+    .success{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 48px;
+        gap: 32px;
+
+        background: #FFFFFF;
+        border-radius: 16px;
+        max-width: 416px;
+        i{
+            width: 120px;
+            content: url('../assets/svg/letter-illustration.svg');
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 32px;
+            .text{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: v.$main_black;
+            }
+        }
+        .btn-back{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 12px;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: v.$main_black;
+            i{
+                width: 24px;
+                height: 24px;
+                content: url('../assets/svg/arrow-left-black.svg');
+            }
+        }
+    }
+}
