@@ -25,10 +25,10 @@ const Login = () => {
                     navigate('/');
                     break
                 case 401:
-                    setError('Вы неправильно ввели email или пароль. Проверьте еще раз');
+                    setError(t("login.errors.invalid"));
                     break;
                 default:
-                    setError('Что то пошло не так. Попробуйте еще раз.')
+                    setError(t("login.errors.wentWrong"))
                     break;
             }
         }
@@ -72,8 +72,10 @@ const Login = () => {
                     )}
                 </div>
                 <div className="qa-action">
-                    {t("login.forgot_password")}
-                    <Link to="" className="action">{t("login.restore")}</Link>
+                    <span>
+                        {t("login.forgot_password")}
+                    </span>
+                    <Link to="restore" className="action">{t("login.restore")}</Link>
                 </div>
                 <div className="buttons">
                     <input type="submit" className="btn48 w-100" value={t("login.login_btn")} />
@@ -88,7 +90,9 @@ const Login = () => {
                     </div> */}
                 </div>
                 <div className="qa-action">
-                    {t("login.no_account")}
+                    <span>
+                        {t("login.no_account")}
+                    </span>
                     <Link to="/signup" className="action">{t("login.signup")}</Link>
                 </div>
             </form>

@@ -80,7 +80,9 @@
             }
         },
         "errors": {
-            "pass_match": "Your passwords do not match. Repeat one more time"
+            "pass_match": "Your passwords do not match. Repeat one more time",
+            "invalid": "You entered your email or password incorrectly",
+            "wentWrong":"Something went wrong. Try again"
         },
         "forgot_password": "Forgot your password?",
         "restore": "Restore",
@@ -91,6 +93,44 @@
         "signup": "Sign up"
     },
 
+    "restoreAccount": {
+        "heading": "Account recovery",
+        "description": "Enter the email address you used to register",
+        "Email": {
+            "label": "Email",
+            "placeholder": "example@gmail.com"
+        },
+        "errors": {
+            "emptyEmail": "Enter your email",
+            "invalidEmail": "Invalid email address",
+            "noAccount": ""
+        },
+        "restore": "Edit",
+        "rememberPassword": "Remembered your password?",
+        "login": "Login",
+        "success": {
+            "text": "We've sent you an email asking you to recover your account",
+            "button": "Submit again"
+        }
+    },
+
+    "resetPassword": {
+        "description": "Enter a new password",
+        "password": {
+            "label": "Password",
+            "placeholder": "Enter password"
+        },
+        "repeat": {
+            "label": "Confirm password",
+            "placeholder": "Repeat Password"
+        },
+        "errors": {
+            "emptyPassword":"Enter password",
+            "emptyRepeat":"Repeat Password",
+            "mismatch":"Passwords do not match"
+        },
+        "submit": "Restore"
+    },
 
     "qrcard": {
         "download": "Download",
@@ -223,6 +263,13 @@
             "password": {
                 "heading": "Password",
                 "description": "The minimum password length is 8 characters. Do not use passwords from other sites or options that hackers can easily guess"
+            },
+            "errors": {
+                "emailMismatch": "Emails don't match",
+                "passMismatch": "You entered the old password incorrectly or the passwords do not match. Repeat one more time",
+                "passLength": "The length must be at least 8 characters",
+                "oldPass": "You entered the old password incorrectly or the passwords do not match. Repeat one more time",
+                "empty": "Fill out all fields"
             }
         },
         "inputs": {

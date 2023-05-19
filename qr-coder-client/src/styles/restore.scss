@@ -1,6 +1,6 @@
 @use './variables' as v;
 
-#login{
+#restore{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,8 +12,13 @@
         font-size: 40px;
         line-height: 48px;
         color: v.$black;
+        text-align: center;
+    }
+    .description{
+        text-align: center;
     }
     form{
+        width: 416px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -55,40 +60,6 @@
                 }
             }
         }
-        .buttons{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            width: 100%;
-            .or-line{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 0px;
-                gap: 10px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                color: rgba($color: v.$main_black, $alpha: .5);
-
-                span{
-                    display: block;
-                    margin: none;
-                    flex-grow: 1;
-                    height: 1px;
-                    background-color: v.$bg_gey;
-                }
-            }
-            .google-login{
-                i{
-                    width: 24px;
-                    height: 24px;
-                    content: url('../assets/svg/google-logo-small-outline.svg');
-                }
-            }
-        }
         .qa-action{
             display: flex;
             flex-direction: row;
@@ -106,6 +77,56 @@
             .action{
                 font-weight: 600;
                 color: v.$main_black;
+            }
+        }
+    }
+
+    .success{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 48px;
+        gap: 32px;
+
+        background: #FFFFFF;
+        border-radius: 16px;
+        max-width: 416px;
+        i{
+            width: 120px;
+            content: url('../assets/svg/letter-illustration.svg');
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 32px;
+            .text{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: v.$main_black;
+            }
+        }
+        .btn-back{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 12px;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: v.$main_black;
+            cursor: pointer;
+            i{
+                width: 24px;
+                height: 24px;
+                content: url('../assets/svg/arrow-left-black.svg');
             }
         }
     }

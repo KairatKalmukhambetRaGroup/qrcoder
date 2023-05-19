@@ -93,8 +93,18 @@ export const deleteQR = async (req, res) => {
         if(!qr)
             return res.status(404).json({error: "QR does not exist."});
         await QRcode.findByIdAndDelete(qr._id);
-        const qrcodes = await QRcode.find({user: id});
-        return res.json(qrcodes);
+        return await getQRcodes(req, res);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({error: "Something went wrong"});
+    }
+}
+
+export const getQRCount = async (req, res) => {
+    const id = req.userId;
+    try {
+        const count = await QRcode.countDocuments({user: id});
+        return res.json(count);
     } catch (error) {
         console.log(error);
         return res.status(500).json({error: "Something went wrong"});

@@ -1,5 +1,5 @@
 import * as api from '../api';
-import { AUTH, CLEAR_USER_STATUS, REGISTER, USER_ACTIVATION } from '../constants/actionTypes';
+import { AUTH, CHANGE_EMAIL, CHANGE_PASSWORD, CLEAR_USER_STATUS, REGISTER, RESET_PASSWORD, RESTORE_ACCOUNT, USER_ACTIVATION } from '../constants/actionTypes';
 
 export const login = (formData) => async (dispatch) => {
     try {
@@ -37,6 +37,47 @@ export const activateAccount = (token) => async (dispatch) => {
         dispatch({type: CLEAR_USER_STATUS});
         const data = await api.activateUser({activationToken: token});
         dispatch({type: USER_ACTIVATION, payload: data});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const changeEmail = (formData) => async (dispatch) => {
+    try {
+        dispatch({type: CLEAR_USER_STATUS});
+        const data = await api.changeEmail(formData);
+        dispatch({type: CHANGE_EMAIL, payload: {...data, type: 'email'}});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const changePass = (formData) => async (dispatch) => {
+    try {
+        dispatch({type: CLEAR_USER_STATUS});
+        const data = await api.changePass(formData);
+        dispatch({type: CHANGE_PASSWORD, payload: {...data, type: 'password'}});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+export const restoreAccount = (formData) => async (dispatch) => {
+    try {
+        dispatch({type: CLEAR_USER_STATUS});
+        const data = await api.restoreAccount(formData);
+        dispatch({type: RESTORE_ACCOUNT, payload: data});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const resetPassword = (formData) => async (dispatch) => {
+    try {
+        dispatch({type: CLEAR_USER_STATUS});
+        const data = await api.resetPass(formData);
+        dispatch({type: RESET_PASSWORD, payload: data});
     } catch (error) {
         console.log(error);
     }

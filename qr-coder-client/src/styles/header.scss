@@ -44,6 +44,10 @@
                         height: 24px;
                         content: url('../assets/svg/plus-icon-black.svg');
                     }
+                    &.disabled{
+                        cursor: default;
+                        opacity: .75;
+                    }
                 }
             }
             .profile{

@@ -1,5 +1,5 @@
 import * as api from '../api';
-import { ADD_QRS_TO_USER, CREATE_QR, DELETE_QR, FETCH_QR, FETCH_QRS, QR_LINK } from '../constants/actionTypes';
+import { ADD_QRS_TO_USER, CREATE_QR, DELETE_QR, FETCH_QR, FETCH_QRS, QR_COUNT, QR_LINK } from '../constants/actionTypes';
 
 export const getQRLink = (type) => async (dispatch) => {
     try {
@@ -50,6 +50,15 @@ export const deleteQR = (link) => async (dispatch) => {
     try {
         const data = await api.deleteQRCode(link)
         dispatch({type: DELETE_QR, payload: data});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getQRCount = () => async (dispatch) => {
+    try {
+        const data = await api.getQRCount();
+        dispatch({type: QR_COUNT, payload: data});
     } catch (error) {
         console.log(error);
     }

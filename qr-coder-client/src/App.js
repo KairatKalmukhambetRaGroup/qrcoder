@@ -16,6 +16,8 @@ import Signup from "./components/Signup";
 import WelcomePage from "./components/WelcomePage/index";
 
 import './styles/index.scss';
+import Restore from "./components/Restore";
+import ResetPassword from "./components/ResetPassword";
 
 function App() {
   return (
@@ -39,9 +41,13 @@ function App() {
             <Route path="" exact element={<Settings />} />
             <Route path="security" exact element={<Security />} />
           </Route> 
-          <Route path="login" exact element={<Login />} /> 
+          <Route path="login" exact element={<Outlet />} >
+            <Route path="" exact element={<Login />} />
+            <Route path="restore" exact element={<Restore />} />
+          </Route> 
           <Route path="signup" exact element={<Signup />} /> 
           <Route path="activate/:link" element={<ActivateAccount />} />
+          <Route path="reset/:id" element={<ResetPassword />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

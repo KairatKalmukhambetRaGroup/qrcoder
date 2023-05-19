@@ -123,7 +123,7 @@ const VCardForm = ({qr=null, setStatus, authorized=false, name='', setForm, setD
                     <div className={`more ${showMore ? 'active' : ''}`} onClick={(e)=>{e.preventDefault(); setShowMore(!showMore)}}>{showMore ? t("forms.showLess") : t("forms.showMore")}<i></i></div>
                     <div className={`inputs ${showMore ? '' : 'hidden'}`}>
                         <div className="row">
-                            <div className="col"><PhoneInput name="fax" label={t("forms.inputs.firstname.label")} value={formData.fax} onChange={handleChange}/></div>
+                            <div className="col"><PhoneInput name="fax" label={t("forms.inputs.fax.label")} value={formData.fax} onChange={handleChange}/></div>
                         </div>
                         <div className="row">
                             <div className="col"><TextInput name="company" label={t("forms.inputs.company.label")} placeholder={t("forms.inputs.company.placeholder")} value={formData.company} onChange={handleChange}/></div>

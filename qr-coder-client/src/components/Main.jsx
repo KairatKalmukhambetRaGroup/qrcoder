@@ -53,7 +53,7 @@ const Main = () => {
                             <QRItem qrValue={`${process.env.REACT_APP_URL}qr/${qr.link}`} qr={qr} key={key} />
                         ))}
                     </div>
-                    <Pagination page={page} total={total}  />
+                    <Pagination page={page} total={total}  /> 
                 </div>
             </div>
         </div>    

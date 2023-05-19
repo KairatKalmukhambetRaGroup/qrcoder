@@ -91,11 +91,81 @@
                                     width: calc(50% - 8px);
                                 }  
                             }
+                            .error{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                padding: 8px;
+                                gap: 8px;
+                                width: 100%;
+                                background: v.$bg_gey;
+                                border: 1px solid #949494;
+                                border-radius: 8px;
+                                i{
+                                    width: 24px;
+                                    height: 24px;
+                                    content: url('../assets/svg/error.svg');
+                                }
+                                .error-text{
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    color: v.$main_black;
+                                    opacity: 0.7;
+                                }
+                            }
                         }
 
 
                     }
                 }
+            }
+        }
+    }
+
+    .modal_wrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($color: #181818, $alpha: .6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .security_modal{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 48px;
+            gap: 16px;
+    
+            width: 416px;
+    
+            background: #FFFFFF;
+            border-radius: 16px;
+            .icon{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 6px;
+                gap: 10px;
+
+                width: 36px;
+                height: 36px;
+
+                background: rgba(24, 24, 24, 0.1);
+                border-radius: 50%;
+                i{
+                    width: 24px;
+                    height: 24px;
+                    content: url('../assets/svg/check-black.svg');
+                }
+            }
+            .text{
+
             }
         }
     }

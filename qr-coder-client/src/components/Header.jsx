@@ -4,13 +4,14 @@ import decode from 'jwt-decode';
 import '../styles/header.scss';
 
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AUTH, CLEAR_QR_STATUSES, LOGOUT } from "../constants/actionTypes";
-import { addLinksToUser, addQRToUser } from "../actions/qr";
+import { addLinksToUser, addQRToUser, getQRCount } from "../actions/qr";
 
 const Header = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [showLangs, setShowLangs] = useState(false);
     const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useState(i18n.language)
@@ -18,12 +19,13 @@ const Header = () => {
     
     const languages = ['en', 'ru', 'kz'];
     const {authData} = useSelector((state)=>state.users);
-    const {qrAppendStatus} = useSelector((state)=>state.qr);
+    const {qrAppendStatus, qrCount} = useSelector((state)=>state.qr);
 
     useEffect(()=>{
         const profile = JSON.parse(localStorage.getItem('profile'));
         if(profile && profile.token && profile.user){
             const token = profile.token;
+            dispatch(getQRCount());
             if (token) {
                 const decodedToken = decode(token);
                 if (decodedToken.exp * 1000 < new Date().getTime())
@@ -44,8 +46,6 @@ const Header = () => {
                 const obj = localQR.object;
                 if(obj.createdAt !== obj.updatedAt)
                     dispatch(addQRToUser(localQR._id))
-                else
-                    console.log(obj)
             }
         }       
     }
@@ -54,7 +54,6 @@ const Header = () => {
         appendToUser();
     }, [user]);
     useEffect(()=>{
-        console.log(qrAppendStatus)
         if(qrAppendStatus){
             if(qrAppendStatus === 200){
                 localStorage.removeItem('qr');          
@@ -74,6 +73,7 @@ const Header = () => {
     const logout = (e) => {
         e.preventDefault();
         setUser(null);
+        navigate('/');
         dispatch({type: LOGOUT});
     }
     return (
@@ -84,7 +84,11 @@ const Header = () => {
                     {user && (
                         <nav>
                             <li><Link to="/main" className="link">{t("header.main")}</Link></li>
-                            <li><Link to="/qr/new" className="link create"><i></i> {t("header.create")}</Link></li>
+                            {Number(qrCount) < 10 ? (
+                                <li><Link to="/qr/new" className="link create"><i></i> {t("header.create")}</Link></li>
+                            ) : (
+                                <li><div className="link create disabled"><i></i> {t("header.create")}</div></li>
+                            )}
                         </nav>
                     )}
                     <nav>
