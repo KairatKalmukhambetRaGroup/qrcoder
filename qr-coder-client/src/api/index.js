@@ -30,3 +30,10 @@ export const addLocalQRToUser = (id) => API.post('/qr/addlinks', {id});
 export const getQRcode = (link) => API.get(`/qr/${link}`);
 export const deleteQRCode = (link) => API.delete(`/qr/${link}`);
 export const getQRCount = () => API.get('/qr/count');
+
+
+// GOOGLE AUTH
+export const googleAuth = (user) => API.post('/auth/google', user);
+
+// ADMIN
+export const getAllQrs = (page) => API.get(`/admin/qr?page=${page}`);

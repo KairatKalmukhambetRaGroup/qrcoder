@@ -19,3 +19,6 @@ export const FETCH_QR = "FETCH_QR";
 export const DELETE_QR = "DELETE_QR";
 export const CLEAR_QR_STATUSES = "CLEAR_QR_STATUSES";
 export const QR_COUNT = "QR_COUNT";
+
+// ADMIN
+export const FETCH_ALL_QRS = "FETCH_ALL_QRS";

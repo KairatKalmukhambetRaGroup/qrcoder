@@ -1,4 +1,4 @@
-import express, { Route } from "express";
+import express from "express";
 import { appendToUser, createQRCode, deleteQR, getNewQrLink, getQRCount, getQRcode, getQRcodes } from "../controllers/qrcode.js";
 import { auth, ifUser } from "../middleware/auth.js";
 

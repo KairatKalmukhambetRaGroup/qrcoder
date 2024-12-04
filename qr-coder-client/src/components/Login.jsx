@@ -7,6 +7,10 @@ import { CLEAR_USER_STATUS } from "../constants/actionTypes";
 import '../styles/login.scss';
 import { EmailInput, PasswordInput } from "./Input";
 
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {auth} from '../utils/firebase';
+import { googleAuth } from "../actions/googleAuth";
+
 const initFormData = {email: '', password: ''};
 
 const Login = () => {
@@ -16,6 +20,7 @@ const Login = () => {
     const [formData, setFormData] = useState(initFormData);
     const [error, setError] = useState('');
     const {authStatus} = useSelector((state)=>state.users);
+
 
     useEffect(()=>{
         if(authStatus){
@@ -34,6 +39,17 @@ const Login = () => {
         }
     }, [authStatus]);
 
+
+    // SIGN IN WITH GOOGLE
+    const googleProvider = new GoogleAuthProvider();
+    const GoogleLogin = async () => {
+        try {
+            const res = await signInWithPopup(auth, googleProvider);
+            dispatch(googleAuth(res.user));
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const handleChange = (name, value) => {
         setFormData({...formData, [name]: value});
@@ -79,15 +95,15 @@ const Login = () => {
                 </div>
                 <div className="buttons">
                     <input type="submit" className="btn48 w-100" value={t("login.login_btn")} />
-                    {/* <div className="or-line">
+                    <div className="or-line">
                         <span></span>
                         {t("login.or")}
                         <span></span>
                     </div>
-                    <div className="btn48 btn-outline google-login w-100">
+                    <div className="btn48 btn-outline google-login w-100" onClick={GoogleLogin}>
                         <i></i>
                         {t("login.with_google")}
-                    </div> */}
+                    </div>
                 </div>
                 <div className="qa-action">
                     <span>

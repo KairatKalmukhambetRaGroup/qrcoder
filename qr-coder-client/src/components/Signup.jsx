@@ -1,16 +1,16 @@
-import { useGoogleLogin } from "@react-oauth/google";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
 import { sendActivationLink, signup } from "../actions/user";
-import { GOOGLE_AUTH } from "../constants/actionTypes";
-import decode from "jwt-decode"; 
+import {auth} from '../utils/firebase';
+
 
 import '../styles/signup.scss';
 
 import { EmailInput, PasswordInput } from "./Input";
 import { googleAuth } from "../actions/googleAuth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const initFormData = {email: '', password: '', password_repeat: ''};
 
@@ -48,21 +48,31 @@ const Signup = () => {
 
     useEffect(()=>{
         if(registrationStatus){
-            if(registrationStatus >= 200 && registrationStatus < 300){
-                setStatus('success');
-            } else{
-                switch (registrationStatus) {
-                    case 401:
-                        setError(t("signup.errors.userAlreadyExist"));
-                        setStatus('signup')
-                        break;
-                    default:
-                        setStatus('error');
-                        break;
-                }
+            switch (registrationStatus) {
+                case 200:
+                    setStatus('success');
+                    break;
+                case 401:
+                    setError(t("signup.errors.userAlreadyExist"));
+                    setStatus('signup')
+                    break;
+                default:
+                    setStatus('error');
+                    break;
             }
         }
     }, [registrationStatus])
+
+    // SIGN IN WITH GOOGLE
+    const googleProvider = new GoogleAuthProvider();
+    const GoogleLogin = async() => {
+        try {
+            const res = await signInWithPopup(auth, googleProvider);
+            dispatch(googleAuth(res.user));
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
 
     const handleChange = (name, value) => {
@@ -87,17 +97,6 @@ const Signup = () => {
         setStatus('signup');
     }
 
-    const loginWithGoole = useGoogleLogin({
-        onSuccess: (res) => {
-            const token = res?.access_token;
-            try {
-                dispatch(googleAuth(token));
-            } catch (error) {
-                console.log(error)
-            }
-        },
-        onError: (error) => console.log(error)
-    });
 
 
     return (
@@ -143,16 +142,16 @@ const Signup = () => {
                         </div>
                         <div className="buttons">
                             <input type="submit" className="btn48 w-100" value={t("signup.next_btn")} />
-                            {/* <div className="or-line">
+                            <div className="or-line">
                                 <span></span>
 
                                 {t("signup.or")}
                                 <span></span>
                             </div>
-                            <div className="btn48 btn-outline google-login w-100" onClick={loginWithGoole}>
+                            <div className="btn48 btn-outline google-login w-100" onClick={GoogleLogin}>
                                 <i></i>
                                 {t("login.with_google")}
-                            </div> */}
+                            </div>
                         </div>
                         <Link to="/login" className="has-account">{t("signup.has_account")}</Link>
                     </form>

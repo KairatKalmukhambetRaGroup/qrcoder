@@ -19,38 +19,54 @@ import './styles/index.scss';
 import Restore from "./components/Restore";
 import ResetPassword from "./components/ResetPassword";
 
+
+import { UserProvider } from "./contexts/UserContext";
+import AdminDashboard from "./components/Admin/AdminDashboard";
+
 function App() {
+
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<>
-          <Header />
-          <main>          
-            <Outlet />
-          </main>
-          <Footer />
-        </>}>
-          <Route path="" exact element={<WelcomePage />} />
-          <Route path="qr" element={<Outlet />}>
-            <Route path="edit/:link" element={<Edit/>} />
-            <Route path="new" element={<Create />} />
-            <Route path=":link" element={<Item/>} />
+      <UserProvider>
+        <Routes>
+          {/* <Route path="admin" element={
+            <>
+              <Outlet />
+            </>
+            } 
+          >
+            <Route path="dashboard/:page?" exact element={<AdminDashboard />} />
+          </Route> */}
+          <Route path="/" element={<>
+            <Header />
+            <main>          
+              <Outlet />
+            </main>
+            <Footer />
+          </>}>
+            <Route path="" exact element={<WelcomePage />} />
+            <Route path="qr" element={<Outlet />}>
+              <Route path="edit/:link" element={<Edit/>} />
+              <Route path="new" element={<Create />} />
+              <Route path=":link" element={<Item/>} />
+            </Route>
+            <Route path="main/:page?" exact element={<Main />} />
+            <Route path="profile" element={<Profile />} >
+              <Route path="" exact element={<Settings />} />
+              <Route path="security" exact element={<Security />} />
+            </Route> 
+            <Route path="login" exact element={<Outlet />} >
+              <Route path="" exact element={<Login />} />
+              <Route path="restore" exact element={<Restore />} />
+            </Route> 
+            <Route path="signup" exact element={<Signup />} /> 
+            <Route path="activate/:link" element={<ActivateAccount />} />
+            <Route path="reset/:id" element={<ResetPassword />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="main/:page?" exact element={<Main />} />
-          <Route path="profile" element={<Profile />} >
-            <Route path="" exact element={<Settings />} />
-            <Route path="security" exact element={<Security />} />
-          </Route> 
-          <Route path="login" exact element={<Outlet />} >
-            <Route path="" exact element={<Login />} />
-            <Route path="restore" exact element={<Restore />} />
-          </Route> 
-          <Route path="signup" exact element={<Signup />} /> 
-          <Route path="activate/:link" element={<ActivateAccount />} />
-          <Route path="reset/:id" element={<ResetPassword />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+          
+        </Routes>
+      </UserProvider>
     </BrowserRouter>
   );
 }

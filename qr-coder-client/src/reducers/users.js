@@ -1,4 +1,4 @@
-import { AUTH, CHANGE_EMAIL, CHANGE_PASSWORD, CLEAR_USER_STATUS, GOOGLE_AUTH, LOGOUT, REGISTER, RESET_PASSWORD, RESTORE_ACCOUNT, USER_ACTIVATION } from "../constants/actionTypes";
+import { AUTH, CHANGE_EMAIL, CHANGE_PASSWORD, CLEAR_USER_STATUS, LOGOUT, REGISTER, RESET_PASSWORD, RESTORE_ACCOUNT, USER_ACTIVATION } from "../constants/actionTypes";
 
 const userReducers = (state = {updateType: null, restorationStatus: null, googleAuthData: null, authData: null, authStatus: null, registrationStatus: null, activationStatus: null}, action) => {
     switch (action.type) {
@@ -30,10 +30,6 @@ const userReducers = (state = {updateType: null, restorationStatus: null, google
                 return {...state, authData: action.payload.data, activationStatus: action.payload.status}; 
             }
             return {...state, activationStatus: action.payload.status};
-        
-        case GOOGLE_AUTH: 
-            console.log(action?.data);
-            return state;
         default:
             return state;
     }

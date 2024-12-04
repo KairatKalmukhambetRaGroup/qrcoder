@@ -1,9 +1,12 @@
 import axios from "axios"
+import { AUTH, CLEAR_USER_STATUS } from "../constants/actionTypes";
+import * as api from '../api';
 
-export const googleAuth = (token) => async (dispatch) => {
+export const googleAuth = (formData) => async (dispatch) => {
     try {
-        const data = await axios.get(`https://www.googleapis.com/auth/${token}`);
-        console.log(data);
+        dispatch({type: CLEAR_USER_STATUS});
+        const data = await api.googleAuth(formData);
+        dispatch({type: AUTH, payload: data});
     } catch (error) {
         console.log(error);
     }

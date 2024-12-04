@@ -18,8 +18,10 @@ const QRForm = ({qr=null, authorized=false, name=''}) => {
     }
 
     useEffect(()=> async ()=>{
+        console.log(status)
         if(status === 'success' && !authorized){
             setShowPopover(true);
+            
         }
     }, [status]);
 

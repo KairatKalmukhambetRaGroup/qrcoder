@@ -28,7 +28,7 @@ const QRItem = ({qrValue=null, qr=null}) => {
                         <div className="label">{t("qr.item.title")}</div>
                         <div className="value">{qr.name ? qr.name : t("qr.item.title")}</div>
                     </div>
-                    <div className="label">{t("qr.item.lastEdit", {date: moment(qr.object.updatedAt).format('DD.MM.YYYY')})}</div>
+                    {/* <div className="label">{t("qr.item.lastEdit", {date: moment(qr.object.updatedAt).format('DD.MM.YYYY')})}</div> */}
                 </div>
             </div>
             <div className="buttons">
